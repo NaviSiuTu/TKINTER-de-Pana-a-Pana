@@ -4,7 +4,7 @@ def ventanita ():
     nuevaventana = tk.Toplevel()
     nuevaventana.title ("OMG")
     nuevaventana.geometry("300x100")
-    ventana.destroy
+    ventana.quit
 
     mensaje = tk.Label(nuevaventana, text="NOSEQUEPONEJAJAJAEKISDE")
     mensaje.pack()

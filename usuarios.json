@@ -10,5 +10,9 @@
     {
         "nombre": "Arangaraar",
         "edad": 42
+    },
+    {
+        "usuario": "Navi",
+        "correo": "Navi@gmail.com"
     }
 ]

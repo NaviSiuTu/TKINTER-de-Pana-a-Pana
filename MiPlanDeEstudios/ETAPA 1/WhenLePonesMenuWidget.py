@@ -1,28 +1,28 @@
 import tkinter as tk
 from tkinter import messagebox
 
+# Funciones de ejemplo
+def nueva_ventana():
+    messagebox.showinfo("Nueva ventana", "Has creado un nuevo archivo.")
+
 def salir():
     ventana.quit()
 
-def mostrar_info():
-    messagebox.showinfo("Acerca de", "Esta es una app creada con Tkinter 😎")
-
 ventana = tk.Tk()
-ventana.title("Menú en Tkinter")
+ventana.title("Menús en Tkinter")
 ventana.geometry("400x300")
 
 # Crear la barra de menú
 barra_menu = tk.Menu(ventana)
-ventana.config(menu=barra_menu)
+ventana.config(menu=barra_menu)  # asociamos la barra con la ventana
 
-# Menú "Archivo"
+# Crear el menú 'Archivo'
 menu_archivo = tk.Menu(barra_menu, tearoff=0)
 barra_menu.add_cascade(label="Archivo", menu=menu_archivo)
-menu_archivo.add_command(label="Salir", command=salir)
 
-# Menú "Ayuda"
-menu_ayuda = tk.Menu(barra_menu, tearoff=0)
-barra_menu.add_cascade(label="Ayuda", menu=menu_ayuda)
-menu_ayuda.add_command(label="Acerca de", command=mostrar_info)
+# Opciones dentro de 'Archivo'
+menu_archivo.add_command(label="Nuevo", command=nueva_ventana)
+menu_archivo.add_separator()  # Línea divisora
+menu_archivo.add_command(label="Salir", command=salir)
 
 ventana.mainloop()
